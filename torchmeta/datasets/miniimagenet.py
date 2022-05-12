@@ -175,6 +175,7 @@ class MiniImagenetClassDataset(ClassDataset):
             self.gz_filename, md5=self.gz_md5)
 
         filename = os.path.join(self.root, self.gz_filename)
+        print(filename)
         with tarfile.open(filename, 'r') as f:
             f.extractall(self.root)
 
