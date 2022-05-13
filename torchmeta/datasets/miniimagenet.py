@@ -156,6 +156,7 @@ class MiniImagenetClassDataset(ClassDataset):
         return self._labels
 
     def _check_integrity(self):
+        print(self.split_filename, self.split_filename_labels)
         return (os.path.isfile(self.split_filename)
             and os.path.isfile(self.split_filename_labels))
 
