@@ -172,8 +172,8 @@ class MiniImagenetClassDataset(ClassDataset):
         if self._check_integrity():
             return
 
-        download_file_from_google_drive(self.gdrive_id, self.root,
-            self.gz_filename, md5=self.gz_md5)
+        # download_file_from_google_drive(self.gdrive_id, self.root,
+        #     self.gz_filename, md5=self.gz_md5)
 
         filename = os.path.join(self.root, self.gz_filename)
         print(filename)
